@@ -4,3 +4,8 @@ console.log("http://localhost:8000/");
 for await (const req of s) {
   req.respond({ body: "Hello World\n" });
 }
+
+// Fetching some data
+const res = await fetch('https://randomuser.me/api');
+const data = await res.json();
+console.log("Response:", data);
